@@ -1,0 +1,449 @@
+
+:root {
+    --color-de-fondo: #121212;
+    --color-de-fondo-menu: #121212;
+    --color-de-link-ppal: rgb(253, 111, 0); 
+    --color-de-link-secundario: #959595
+}
+
+body {
+    background-color: var(--color-de-fondo);
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    line-height: 1.6;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-de-link-ppal);
+}
+
+h4 {
+    color:#707070;
+}
+
+h3 {
+    color:#FEFEFE;
+}
+
+h2 {
+    color:rgb(253, 111, 0);
+}
+
+
+p{
+    color:#959595;
+}
+
+/* ------------------------------ Sección Menú -------------------------------*/
+.cabecera {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    justify-content: space-between;
+}
+
+.cabecera__logo {
+    max-width: 35px; /* Ajuste para pantallas pequeñas */
+}
+
+
+.cabecera__titulo {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.cabecera__logo__menu:hover {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+}
+
+/* ------------------------------ Navegacion-------------------------------*/
+.navegacion__elemento:nth-child(1),
+.navegacion__elemento:nth-child(2),
+.navegacion__elemento:nth-child(3),
+.navegacion__elemento:nth-child(4),
+.navegacion__elemento:nth-child(5),
+.navegacion__elemento:nth-child(6){
+    display: none;
+}
+
+/*
+.navegacion__lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+    */
+/*
+.navegacion__lista {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--color-de-fondo-menu);
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 1rem;
+    border: 1px solid var(--color-de-link-ppal);
+    border-radius: 5px;
+    z-index: 10;
+}
+
+*/
+
+/*
+
+
+/* Estilo del menú de navegación */
+/*
+.navegacion {
+    position: absolute;
+    top: 60px; 
+    left: 0;
+    width: 100%;
+    background-color: var(--color-de-fondo-menu);
+    overflow: hidden;
+    max-height: 0; 
+    transition: max-height 0.3s ease; 
+    z-index: 10;
+}
+*/
+/*
+.navegacion__lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+*/
+/*
+.navegacion__elemento {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.navegacion__elemento.visible {
+    display: block;
+}
+.navegacion__elemento a {
+    font-size: 1rem;
+    color: var(--color-de-link-ppal);
+}
+
+/* Mostrar el menú cuando se activa */
+/*
+.navegacion--activo {
+    max-height: 300px; 
+}
+*/
+
+.navegacion {
+    position: absolute;
+    top: 60px; /* Altura del header */
+    left: 0;
+    width: 100%;
+    background-color: var(--color-de-fondo-menu);
+    overflow: hidden;
+    max-height: 0; /* Oculto por defecto */
+    transition: max-height 0.3s ease; /* Animación al desplegar */
+    z-index: 10;
+}
+
+.navegacion--activo {
+    max-height: 300px; /* Altura suficiente para mostrar el menú */
+}
+
+.navegacion__elemento {
+    display: block; /* Cambiado a block para que se muestre correctamente */
+    padding: 10px;
+}
+
+
+
+
+
+
+/* ------------------------------ Sección Presentación ------------------------------*/
+.presentacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Alinea el contenido (imagen) verticalmente */
+    text-align: center; /* Centra el texto también */
+    gap: 20px; /* Añade un espacio entre los elementos */
+    
+}
+.presentacion__contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Para centrar el contenido */
+    line-height: 0; /* Ajustar el espacio entre líneas */
+}
+
+.presentacion__principal{
+    font-size: 2.5rem;
+}
+
+.redes{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;;
+    padding: 0;
+    margin: 0;
+}
+
+.redes__img a img {
+    width: 40px; /* Ajusta el tamaño del icono */
+    height: 40px;
+}
+
+.image-container {
+    position: relative;
+    width: 300px; /* Ancho igual al de tu imagen original */
+    height: 300px; /* Alto igual al de tu imagen original */
+    margin-top: 20px;
+  }
+  
+  .background-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen al contenedor */
+  }
+  
+  .foreground-image {
+    position: absolute;
+    top: -10%; /* Ajusta la posición vertical */
+    left: 10%; /* Ajusta la posición horizontal */
+    width: 80%; /* Reduce el tamaño para ajustarse al círculo */
+    height: auto; /* Mantiene la proporción de la imagen */
+  }
+
+/*
+.presentacion__foto{
+    width: 300px;
+    height: 400px;
+    object-fit:scale-down; /* Para asegurarte de que la imagen mantenga su proporción */
+    /*margin-top: 20px; /* Añadir un margen superior */
+    
+
+    
+
+
+
+/* ------------------------------ Sección sobre mí ----------------------------------*/
+.sobre-mi {
+    padding: 0rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/*------------------------------ Sección de Habilidades ------------------------------*/
+.habilidades {
+    padding: 0rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 2rem;
+}
+
+
+
+.habilidades__lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.habilidades__elemento {
+    text-align: center;
+    max-width: 250px;
+}
+
+.habilidades__icono {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5rem;
+}
+
+/*------------------------------ Sección de Aficiones --------------------------------*/
+.aficiones {
+    padding: 0rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 2rem;
+}
+
+.aficiones__lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.aficiones__elemento {
+    text-align: center;
+    max-width: 150px;
+}
+
+.aficiones__icono {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0.5rem;
+}
+
+/*------------------------------ Sección de Formación Académica ----------------------*/
+.formacion {
+    padding: 0rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 2rem;
+}
+
+.formacion__lista {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.formacion__elemento {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+}
+
+.formacion__icono {
+    width: 60px;
+    height: 60px;
+}
+
+.formacion__nombre {
+    font-size: 1.2rem;
+    color: var(--color-texto);
+}
+
+.formacion__detalle {
+    color: var(--color-texto-secundario);
+}
+
+/*------------------------------ Sección de Experiencia Profesional ------------------*/
+.proyectos {
+    padding: 0rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.proyectos__contenedor {
+    max-width: 800px;
+    padding: 1rem;
+    border: 1px solid var(--color-texto-secundario);
+    border-radius: 8px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.proyectos__nombre {
+    font-size: 1.5rem;
+    color: var(--color-texto);
+    margin-bottom: 0.5rem;
+}
+
+.proyectos__descripcion {
+    color: var(--color-texto-secundario);
+}
+
+/*------------------------------ Sección de Contacto ---------------------------------*/
+.contacto {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    ;
+}
+
+.contacto__formulario {
+    padding: 3rem 2rem;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 500px;
+    border: solid #e05d00
+}
+
+.contacto__campo {
+    width: 80%;
+    padding: 0.8rem;
+    border: 1px solid var(--color-de-link-ppal);
+    border-radius: 8px;
+    background-color: var(--color-de-fondo);
+    color: #FEFEFE;
+    font-size: 1rem;
+}
+
+.contacto__campo--textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contacto__boton {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--color-de-link-ppal);
+    color: var(--color-de-fondo);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contacto__boton:hover {
+    background-color: #e05d00;
+}
+
+/* ------------------------------ Responsividad ---------------------------------------*/
+
+/* Tablets y pantallas más grandes */
+@media (min-width: 768px) {
+    .habilidades__lista,
+    .aficiones__lista {
+        gap: 3rem;
+    }
+
+    .formacion__lista {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+    }
+}
+
